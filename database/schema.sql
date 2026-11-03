@@ -1,7 +1,7 @@
 -- ConectaDoa · schema.sql
 -- Recria o banco do zero. Atenção: apaga os dados que já existirem.
 SET NAMES utf8mb4;
-DROP DATABASE IF EXISTS conectadoa;
+DROP DATABASE IF EXISTS ongunidos;
 CREATE DATABASE conectadoa CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE conectadoa;
 CREATE TABLE doador (
