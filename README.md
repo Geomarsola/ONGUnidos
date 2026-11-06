@@ -1,6 +1,6 @@
-# suaONG
+# ONGUNidos
 
-Sistema de gestão de doações para a ONG [nome da sua ONG].
+Sistema de gestão de doações para a ONG [ONGUnidos].
 Projeto Integrador Extensionista · ADS.
 
 ## Requisitos
@@ -11,8 +11,8 @@ Projeto Integrador Extensionista · ADS.
 ## Como rodar
 
 1. Clone o repositório e entre na pasta:
-   git clone https://github.com/SEU-USUARIO/conectadoa.git
-   cd conectadoa
+   git clone https://github.com/Geomarsola/ONGUnidos
+   cd ongunidos
 2. Instale as dependências: vp install
 3. Copie .env.example para .env
 4. Terminal 1, inicie a API: vp run api
