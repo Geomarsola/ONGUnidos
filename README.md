@@ -1,4 +1,4 @@
-# ONGUNidos
+# ONGUnidos
 
 Sistema de gestão de doações para a ONG [ONGUnidos].
 Projeto Integrador Extensionista · ADS.
