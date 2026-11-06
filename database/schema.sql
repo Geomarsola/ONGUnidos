@@ -2,7 +2,7 @@
 -- Recria o banco do zero. Atenção: apaga os dados que já existirem.
 SET NAMES utf8mb4;
 DROP DATABASE IF EXISTS ongunidos;
-CREATE DATABASE conectadoa CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+CREATE DATABASE ongunidos CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE ongunidos;
 CREATE TABLE doador (
  id_doador INT AUTO_INCREMENT PRIMARY KEY,
