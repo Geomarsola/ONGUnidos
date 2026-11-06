@@ -16,7 +16,7 @@ app.get("/api/health", async (req, res) => {
   res.json({
     status: "ok",
     banco,
-    app: "ConectaDoa",
+    app: "ongunidos",
     hora: new Date().toISOString(),
   });
 });

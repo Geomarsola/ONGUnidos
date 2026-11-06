@@ -1,7 +1,7 @@
 import "./style.css";
 const app = document.querySelector("#app");
 app.innerHTML = `
- <h1>suaONG</h1>
+ <h1>ONGUnidos</h1>
  <p>Status da API: <strong id="status">verificando...</strong></p>
 `;
 async function verificarApi() {
