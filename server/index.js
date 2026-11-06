@@ -9,3 +9,18 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`API rodando em http://localhost:${PORT}`);
 });
+
+app.get("/api/health", async (req, res) => {
+  let banco = "ok";
+  try {
+    await db.query("SELECT 1");
+  } catch {
+    banco = "sem conexão";
+  }
+  res.json({
+    status: "ok",
+    banco,
+    app: "ongunidos",
+    hora: new Date().toISOString(),
+  });
+});
