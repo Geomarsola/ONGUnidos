@@ -1,7 +1,7 @@
--- ConectaDoa · seed.sql
+-- ONGUnidos · seed.sql
 -- Dados de exemplo. Rode depois do schema.sql.
 SET NAMES utf8mb4;
-USE conectadoa;
+USE ongunidos;
 INSERT INTO categoria (nome) VALUES
  ('Alimento'),
  ('Higiene'),
@@ -14,7 +14,6 @@ INSERT INTO item (id_categoria, nome, unidade) VALUES
  (2, 'Sabonete', 'unidade'),
  (2, 'Creme dental', 'unidade'),
  (2, 'Fralda infantil', 'pacote'),
-PIE II · Aula 2 · Material de Apoio · 4
  (3, 'Agasalho', 'peça'),
  (3, 'Cobertor', 'unidade');
 INSERT INTO doador (nome, email, telefone) VALUES
