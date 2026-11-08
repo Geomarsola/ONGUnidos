@@ -1,17 +1,23 @@
 import "./style.css";
+import { renderDoadores } from "./pages/doadores.js";
+import { renderDoacoes } from "./pages/doacoes.js";
+import { renderConsulta } from "./pages/consulta.js";
+import { renderShell } from "./ui.js";
+
 const app = document.querySelector("#app");
-app.innerHTML = `
- <h1>ONGUnidos</h1>
- <p>Status da API: <strong id="status">verificando...</strong></p>
-`;
-async function verificarApi() {
-  const status = document.querySelector("#status");
-  try {
-    const resposta = await fetch("/api/health");
-    const dados = await resposta.json();
-    status.textContent = `${dados.status} (${dados.hora})`;
-  } catch {
-    status.textContent = "API fora do ar";
-  }
+const rotas = {
+  "/doadores": renderDoadores,
+  "/doacoes/nova": renderDoacoes,
+  "/doacoes": renderConsulta,
+};
+
+function renderizarRota() {
+  const rotaSolicitada = window.location.hash.slice(1) || "/doadores";
+  const rota = rotas[rotaSolicitada] ? rotaSolicitada : "/doadores";
+  const render = rotas[rota];
+  app.replaceChildren(renderShell(rota, render));
+  render(app.querySelector("#conteudo"));
 }
-verificarApi();
+
+window.addEventListener("hashchange", renderizarRota);
+renderizarRota();
